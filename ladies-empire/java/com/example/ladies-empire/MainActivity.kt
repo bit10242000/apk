@@ -17,10 +17,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+    Surface(color = Color) {
+        Text(
+            text = "Hi, my name is $name!",
+            modifier = modifier
+        )
+    }
 }
 
 @Preview(showBackground = true)
