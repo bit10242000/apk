@@ -1,12 +1,19 @@
 package(
     default_visibility = ["//src:__subpackages__"],
 )
+load("@rules_kotlin//kotlin:kotlin.bzl", "kt_android_library")
+load("@rules_kotlin//kotlin:kotlin.bzl", "kt_jvm_library")
 
-android_library(
+kt_jvm_library(
+    name = "le_activity_kt",
+    srcs = glob(["ladiesempire/**/*.kt"], allow_empty=True),
+    deps = 
+)
+kt_android_library(
     name = "le_activity",
     srcs = [
         "MainActivity.kt",
     ],
     manifest = "Manifests/AndroidManifest.xml",
-    resource_files = glob(["res/**"]),
+    resource_files = glob(["res/**"], allow_empty=True),
 )
